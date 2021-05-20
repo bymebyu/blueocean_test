@@ -7,5 +7,17 @@ pipeline {
       }
     }
 
+    stage('BUILD_BIN') {
+      steps {
+        build '01_AE_Build'
+      }
+    }
+
+    stage('UNIT_TEST') {
+      steps {
+        build '02_AE_Basic_UnitTest'
+      }
+    }
+
   }
 }
